@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-active {
+    @apply p-2 relative rounded-l-full bg-gray-200 before:content-[''] before:absolute before:w-10 
+        before:h-10 before:shadow-[20px_20px_#e5e7eb] before:rounded-[50%] before:right-0 
+        before:-top-10 after:content-[''] after:absolute after:w-10 after:h-10 
+        after:shadow-[20px_-20px_#e5e7eb] after:rounded-[50%] 
+        after:right-0 after:top-16;
+  }
+
+  .sidebar-active a {
+    @apply bg-white p-3 rounded-full text-primary;
+  }
+}
