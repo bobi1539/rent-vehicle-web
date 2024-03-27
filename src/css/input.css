@@ -4,14 +4,62 @@
 
 @layer components {
   .sidebar-active {
-    @apply p-2 relative rounded-l-full bg-gray-200 before:content-[''] before:absolute before:w-10 
-        before:h-10 before:shadow-[20px_20px_#e5e7eb] before:rounded-[50%] before:right-0 
+    @apply p-2 relative rounded-l-full bg-gray-100 before:content-[''] before:absolute before:w-10 
+        before:h-10 before:shadow-[20px_20px_#F3F4F6] before:rounded-[50%] before:right-0 
         before:-top-10 after:content-[''] after:absolute after:w-10 after:h-10 
-        after:shadow-[20px_-20px_#e5e7eb] after:rounded-[50%] 
+        after:shadow-[20px_-20px_#F3F4F6] after:rounded-[50%] 
         after:right-0 after:top-16;
   }
 
   .sidebar-active a {
     @apply bg-white p-3 rounded-full text-primary;
   }
+
+  .sidebar-open {
+    @apply fixed bg-white h-screen top-0 left-0 w-56 overflow-x-hidden transition-all duration-300 ease-in scrollbar-none z-[2000];
+  }
+
+  .sidebar-close {
+    @apply fixed bg-white h-screen top-0 left-0 w-0 overflow-x-hidden transition-all duration-300 ease-in scrollbar-none z-[2000];
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .w-open-sidebar {
+    @apply relative transition-all duration-300 ease-in;
+    left: 14rem;
+    width: calc(100% - 14rem);
+  }
+
+  .w-close-sidebar {
+    @apply relative transition-all duration-300 ease-in;
+    left: 0;
+    width: 100%;
+  }
+
+  .a-primary {
+    @apply text-primary hover:text-primary_hover transition-all duration-300 ease-in;
+  }
+
+  .btn-notif {
+    @apply text-gray-600 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center me-2 hover:text-primary;
+  }
+
+  .popup-notif {
+    @apply absolute w-80 h-96 rounded-md bg-white border border-gray-100 shadow-sm -right-5 top-12;
+  }
+
+  .notif-li {
+    @apply border-b-gray-200 border-b text-sm text-gray-600 hover:bg-gray-100 px-4 py-2 transition-all duration-300 ease-in;
+  }
+
+  /* * {
+    border: 1px solid red;
+  } */
 }

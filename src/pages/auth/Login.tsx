@@ -44,10 +44,7 @@ const Login: React.FC = () => {
           <div className="mt-5">
             <p className="text-gray-600 text-center">
               Belum Punya Akun?
-              <a
-                href={FE_AUTH_REGISTER}
-                className="ms-2 text-primary hover:text-primary_hover transition-all duration-300 ease-in"
-              >
+              <a href={FE_AUTH_REGISTER} className="ms-2 a-primary">
                 Daftar
               </a>
             </p>

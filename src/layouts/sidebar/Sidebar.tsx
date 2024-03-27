@@ -17,9 +17,12 @@ interface SidebarMenus {
   link: string;
 }
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  isSidebarOpen: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
   const { pathname } = location;
-  console.log(pathname);
   const sidebarMenus: SidebarMenus[] = [
     { key: 1, label: "Dashboard", icon: "bx-tachometer", link: FE_DASHBOARD },
     { key: 2, label: "Produk", icon: "bx-box", link: FE_PRODUCT },
@@ -30,11 +33,8 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <div
-      className="fixed bg-white h-screen w-56 top-0 left-0 overflow-x-hidden 
-           transition-all duration-300 ease-in"
-    >
-      <div className="my-5">
+    <div className={isSidebarOpen ? "sidebar-open" : "sidebar-close"}>
+      <div className="my-5 whitespace-nowrap">
         <TitleLogo
           title="My Company"
           imgClass="w-10 -mt-1"

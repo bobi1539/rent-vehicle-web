@@ -17,7 +17,6 @@ const InputRightIcon: React.FC<InputRightIconProps> = ({
   required,
   icon,
 }) => {
-  const classNameIcon = `bx bx-${icon} me-2 bx-sm opacity-30 absolute right-1 top-3`;
   return (
     <div className="my-4">
       <label className="block mb-2 text-gray-600" htmlFor={name}>
@@ -33,7 +32,9 @@ const InputRightIcon: React.FC<InputRightIconProps> = ({
           required={required}
           autoComplete="off"
         />
-        <i className={classNameIcon}></i>
+        <i
+          className={`bx bx-${icon} me-2 bx-sm opacity-30 absolute right-1 top-3`}
+        ></i>
       </div>
     </div>
   );

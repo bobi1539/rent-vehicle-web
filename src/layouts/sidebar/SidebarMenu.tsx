@@ -14,15 +14,13 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   link,
   liClass,
 }) => {
-  const iconClass = `bx ${icon} bx-sm`;
-
   return (
     <li className={liClass}>
       <NavLink
         to={link}
         className="flex justify-start gap-2 text-gray-600 hover:text-primary"
       >
-        <i className={iconClass}></i>
+        <i className={`bx ${icon} bx-sm`}></i>
         {label}
       </NavLink>
     </li>

@@ -4,7 +4,7 @@ import AdminLayout from "../../layouts/admin/AdminLayout";
 const Product: React.FC = () => {
   return (
     <AdminLayout>
-      <h1>Produk</h1>
+      <h1 className="m-4 text-xl font-bold">Produk</h1>
     </AdminLayout>
   );
 };
