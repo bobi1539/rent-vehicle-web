@@ -4,11 +4,13 @@ import ButtonPrimary from "../../components/button/ButtonPrimary";
 import ButtonIconGoogle from "../../components/button/ButtonIconGoogle";
 import TitleLogo from "../../components/title/TitleLogo";
 import { FE_AUTH_REGISTER } from "../../constants/feEndpoint";
+import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("success");
+    navigate("/");
   };
 
   return (

@@ -1,2 +1,9 @@
 export const FE_AUTH_LOGIN = "/auth/login";
 export const FE_AUTH_REGISTER = "/auth/register";
+export const FE_INDEX = "/";
+export const FE_DASHBOARD = "/dashboard";
+export const FE_PRODUCT = "/product";
+export const FE_CATEGORY = "/category";
+export const FE_USER = "/user";
+export const FE_ORDER = "/order";
+export const FE_REPORT = "/report";
