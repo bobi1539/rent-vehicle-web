@@ -16,6 +16,9 @@ const Category: React.FC = () => {
           padding="ps-1 pe-2 py-1"
         />
       </div>
+      <div className="bg-white mt-5 rounded-md p-4 h-[100rem]">
+        <h1>Hello</h1>
+      </div>
     </AdminLayout>
   );
 };

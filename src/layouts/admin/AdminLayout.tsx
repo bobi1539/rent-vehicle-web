@@ -10,15 +10,16 @@ const AdminLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <div className="bg-gray-100">
-      <div className="h-screen overflow-hidden">
+      <div className="overflow-hidden">
         <Sidebar isSidebarOpen={isSidebarOpen} />
-        <div className={isSidebarOpen ? "w-open-sidebar" : "w-close-sidebar"}>
-          <Topbar handleOpenCloseSidebar={() => handleOpenCloseSidebar()} />
-        </div>
+        <Topbar
+          isSidebarOpen={isSidebarOpen}
+          handleOpenCloseSidebar={() => handleOpenCloseSidebar()}
+        />
         <main
           className={isSidebarOpen ? "md:w-open-sidebar" : "md:w-close-sidebar"}
         >
-          <div className="m-6">{children}</div>
+          <div className="m-6 mt-24">{children}</div>
         </main>
       </div>
     </div>

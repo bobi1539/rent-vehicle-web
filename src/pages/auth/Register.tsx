@@ -11,7 +11,7 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center mx-5 mt-24 md:mt-16">
+    <div className="flex justify-center mx-5 mt-12 md:mt-16">
       <div className="border p-10 rounded-md shadow-md w-96">
         <TitleLogo title="Daftar" />
         <form action="#" onSubmit={handleRegister}>

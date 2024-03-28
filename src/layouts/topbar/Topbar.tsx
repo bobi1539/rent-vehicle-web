@@ -4,10 +4,14 @@ import ButtonMenu from "../../components/button/ButtonMenu";
 import PopupProfile from "../../components/popup/PopupProfile";
 
 interface TopbarProps {
+  isSidebarOpen: boolean;
   handleOpenCloseSidebar: () => void;
 }
 
-const Topbar: React.FC<TopbarProps> = ({ handleOpenCloseSidebar }) => {
+const Topbar: React.FC<TopbarProps> = ({
+  isSidebarOpen,
+  handleOpenCloseSidebar,
+}) => {
   const [showNotif, setShowNotif] = useState<string>("hidden");
   const [showProfileOption, setShowProfileOption] = useState<string>("hidden");
 
@@ -38,13 +42,21 @@ const Topbar: React.FC<TopbarProps> = ({ handleOpenCloseSidebar }) => {
   }, []);
 
   return (
-    <div className="flex items-center p-4 bg-white">
-      <ButtonMenu handleOpenCloseSidebar={() => handleOpenCloseSidebar()} />
-      <PopupNotif showNotif={showNotif} handleShowNotif={handleShowNotif} />
-      <PopupProfile
-        showProfileOption={showProfileOption}
-        handleShowProfileOption={handleShowProfileOption}
-      />
+    <div
+      className={
+        isSidebarOpen
+          ? "w-open-sidebar fixed z-[2000]"
+          : "w-close-sidebar fixed z-[2000]"
+      }
+    >
+      <div className="flex items-center p-4 bg-white">
+        <ButtonMenu handleOpenCloseSidebar={() => handleOpenCloseSidebar()} />
+        <PopupNotif showNotif={showNotif} handleShowNotif={handleShowNotif} />
+        <PopupProfile
+          showProfileOption={showProfileOption}
+          handleShowProfileOption={handleShowProfileOption}
+        />
+      </div>
     </div>
   );
 };

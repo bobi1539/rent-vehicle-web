@@ -4,19 +4,15 @@
 
 @layer components {
   .sidebar-active {
-    @apply p-2 relative rounded-l-full bg-gray-100 before:content-[''] before:absolute before:w-10 
-        before:h-10 before:shadow-[20px_20px_#F3F4F6] before:rounded-[50%] before:right-0 
-        before:-top-10 after:content-[''] after:absolute after:w-10 after:h-10 
-        after:shadow-[20px_-20px_#F3F4F6] after:rounded-[50%] 
-        after:right-0 after:top-16;
+    @apply p-2 relative rounded-full bg-gray-100 me-2;
   }
 
   .sidebar-active a {
-    @apply bg-white p-3 rounded-full text-primary;
+    @apply bg-white p-3 rounded-full text-primary shadow-sm;
   }
 
   .sidebar-open {
-    @apply fixed bg-white h-screen top-0 left-0 w-56 overflow-x-hidden transition-all duration-300 ease-in scrollbar-none z-[2000];
+    @apply fixed bg-white h-screen top-0 left-0 w-56 overflow-x-hidden transition-all duration-300 ease-in scrollbar-none z-[2000] border border-gray-100;
   }
 
   .sidebar-close {
@@ -52,7 +48,7 @@
   }
 
   .popup-notif {
-    @apply absolute w-80 h-96 rounded-md bg-white border border-gray-100 shadow-sm -right-5 top-12 z-10;
+    @apply absolute w-80 h-96 rounded-md bg-white border border-gray-100 shadow-sm -right-5 top-12;
   }
 
   .notif-li {
@@ -64,7 +60,7 @@
   }
 
   .popup-profile {
-    @apply absolute w-48 rounded-md bg-white border border-gray-100 shadow-sm right-5 top-12 z-10;
+    @apply absolute w-48 rounded-md bg-white border border-gray-100 shadow-sm right-5 top-12;
   }
 
   .profile-li {
