@@ -9,7 +9,7 @@ interface NotifData {
 
 interface PopupNotifProps {
   showNotif: string;
-  handleShowNotif: () => void;
+  handleShowNotif: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const PopupNotif: React.FC<PopupNotifProps> = ({
@@ -43,12 +43,16 @@ const PopupNotif: React.FC<PopupNotifProps> = ({
     },
   ];
 
+  const handleClickNotif = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
+  };
+
   return (
     <div className="relative">
       <button
-        className="btn-notif"
+        className="btn-rounded-icon"
         type="button"
-        onClick={() => handleShowNotif()}
+        onClick={handleShowNotif}
       >
         <i className="bx bx-bell bx-sm"></i>
       </button>
@@ -60,7 +64,7 @@ const PopupNotif: React.FC<PopupNotifProps> = ({
         <ul className="overflow-y-auto h-80">
           {notifs.map((notif) => (
             <li className="notif-li" key={notif.key}>
-              <a href="#">
+              <a href="#" onClick={handleClickNotif}>
                 <p>
                   <span className="font-bold me-1">{notif.title}</span>
                   {notif.body}

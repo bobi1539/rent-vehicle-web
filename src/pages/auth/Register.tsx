@@ -48,7 +48,7 @@ const Register: React.FC = () => {
             icon="lock"
           />
           <div className="mt-10">
-            <ButtonPrimary label="Daftar" type="submit" />
+            <ButtonPrimary label="Daftar" type="submit" width="w-full" />
           </div>
           <div className="mt-5">
             <p className="text-gray-600 text-center">

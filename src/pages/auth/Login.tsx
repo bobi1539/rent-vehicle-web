@@ -35,7 +35,7 @@ const Login: React.FC = () => {
             icon="lock"
           />
           <div className="mt-10">
-            <ButtonPrimary label="Masuk" type="submit" />
+            <ButtonPrimary label="Masuk" type="submit" width="w-full" />
           </div>
           <div className="mt-5">
             <ButtonIconGoogle label="Masuk Dengan Google" type="button" />

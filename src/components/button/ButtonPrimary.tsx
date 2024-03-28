@@ -3,17 +3,31 @@ import React from "react";
 interface ButtonPrimaryProps {
   label: string;
   type: "submit" | "reset" | "button";
+  width?: string;
+  icon?: string;
+  padding?: string;
 }
 
-const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({ label, type }) => {
+const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
+  label,
+  type,
+  width,
+  icon,
+  padding,
+}) => {
   return (
     <button
-      className="bg-primary rounded-md px-4 text-white py-2 w-full hover:bg-primary_hover transition-all duration-300 ease-in"
+      className={`flex items-center justify-center gap-1 bg-primary text-white ${width} rounded-md ${padding} hover:bg-primary_hover simple-transition`}
       type={type}
     >
+      <i className={`bx bx-${icon} bx-sm`}></i>
       {label}
     </button>
   );
+};
+
+ButtonPrimary.defaultProps = {
+  padding: "py-2 px-4",
 };
 
 export default ButtonPrimary;
