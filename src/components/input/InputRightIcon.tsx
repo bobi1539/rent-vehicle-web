@@ -24,7 +24,7 @@ const InputRightIcon: React.FC<InputRightIconProps> = ({
       </label>
       <div className="relative">
         <input
-          className="border border-gray-400 rounded-md h-12 w-full px-4 focus:border-primary focus:outline-none text-gray-600"
+          className="input-primary"
           type={type}
           name={name}
           id={name}
