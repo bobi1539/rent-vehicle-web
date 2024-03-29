@@ -30,6 +30,7 @@ const ButtonOutline: React.FC<ButtonOutlineProps> = ({
 
 ButtonOutline.defaultProps = {
   padding: "p-1",
+  width: "",
 };
 
 export default ButtonOutline;

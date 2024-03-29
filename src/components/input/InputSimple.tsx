@@ -15,7 +15,7 @@ const InputSimple: React.FC<InputSimpleProps> = ({
 }) => {
   return (
     <input
-      className="input-primary"
+      className="input-primary py-1.5"
       name={name}
       type={type}
       placeholder={placeHolder}
