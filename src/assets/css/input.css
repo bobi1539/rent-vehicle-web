@@ -72,11 +72,15 @@
   }
 
   .input-primary {
-    @apply border border-gray-400 rounded-md h-12 w-full px-4 focus:border-primary focus:outline-none text-gray-600;
+    @apply border border-gray-400 rounded-md py-1.5 w-full px-4 focus:border-primary focus:outline-none text-gray-600;
   }
 
   .btn-outline-primary {
     @apply flex items-center gap-1 border-primary border rounded-md text-gray-600 hover:bg-primary hover:text-white simple-transition;
+  }
+
+  .btn-outline-danger {
+    @apply flex items-center gap-1 border-red-500 border rounded-md text-gray-600 hover:bg-red-500 hover:text-white simple-transition;
   }
 
   /* * {

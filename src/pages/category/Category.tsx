@@ -2,7 +2,8 @@ import React from "react";
 import AdminLayout from "../../layouts/admin/AdminLayout";
 import ButtonPrimary from "../../components/button/ButtonPrimary";
 import InputSimple from "../../components/input/InputSimple";
-import ButtonOutlinePrimary from "../../components/button/ButtonOutlinePrimary";
+import Pagination from "../../components/pagination/Pagination";
+import ButtonOutline from "../../components/button/ButtonOutline";
 
 interface CategoryData {
   id: number;
@@ -50,7 +51,13 @@ const Category: React.FC = () => {
               type="search"
               placeHolder="Nama Kategori..."
             />
-            <ButtonOutlinePrimary type="submit" icon="search" />
+            <ButtonOutline
+              type="submit"
+              icon="bx-search bx-sm"
+              width="w-fit"
+              padding="px-2"
+              variant="primary"
+            />
           </div>
         </form>
         <div className="mt-6 overflow-x-auto">
@@ -69,81 +76,24 @@ const Category: React.FC = () => {
                   <td className="p-3">{no++}</td>
                   <td className="p-3">{category.name}</td>
                   <td className="p-3">{category.description}</td>
-                  <td className="p-3 flex justify-center">
-                    <button type="button" className="btn-outline-primary p-1">
-                      <i className="bx bx-dots-vertical-rounded"></i>
-                    </button>
+                  <td className="p-3 flex justify-center gap-1">
+                    <ButtonOutline
+                      type="button"
+                      icon="bx-show-alt"
+                      variant="primary"
+                    />
+                    <ButtonOutline
+                      type="button"
+                      icon="bx-trash"
+                      variant="danger"
+                    />
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <ul className="my-5 flex justify-start text-gray-600">
-          <li>
-            <a
-              href="#"
-              className="p-1 border border-gray-200 flex items-center 
-                rounded-l-md hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              <i className="bx bx-chevron-left bx-sm"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="px-3 py-1 border border-gray-200 border-l-transparent flex items-center 
-              hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              1
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="px-3 py-1 border border-gray-200 border-l-transparent flex items-center 
-              hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              2
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="px-3 py-1 border border-gray-200 border-l-transparent flex items-center 
-              hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              3
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="px-3 py-1 border border-gray-200 border-l-transparent flex items-center 
-              hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              ...
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="px-3 py-1 border border-gray-200 border-l-transparent flex items-center 
-              hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              10
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="p-1 border border-gray-200 border-l-transparent flex items-center 
-              rounded-r-md hover:border-primary hover:text-primary hover:bg-gray-100 simple-transition"
-            >
-              <i className="bx bx-chevron-right bx-sm"></i>
-            </a>
-          </li>
-        </ul>
+        <Pagination />
       </div>
     </AdminLayout>
   );
