@@ -56,7 +56,7 @@ const Category: React.FC = () => {
               icon="bx-search bx-sm"
               width="w-fit"
               padding="px-2"
-              variant="primary"
+              variant="btn-outline-primary"
             />
           </div>
         </form>
@@ -80,12 +80,12 @@ const Category: React.FC = () => {
                     <ButtonOutline
                       type="button"
                       icon="bx-show-alt"
-                      variant="primary"
+                      variant="btn-outline-primary"
                     />
                     <ButtonOutline
                       type="button"
                       icon="bx-trash"
-                      variant="danger"
+                      variant="btn-outline-danger"
                     />
                   </td>
                 </tr>
